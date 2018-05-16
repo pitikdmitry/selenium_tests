@@ -6,7 +6,8 @@ class GiftElement(BaseElement):
     GIFTS_MARKED_ITEM_NAV_BAR = '//a[@hrefattrs="st.cmd=giftsFront&st.or=NAV_MENU&st._aid=NavMenu_User_Presents"]' \
                                 '[@class="mctc_navMenuSec mctc_navMenuActiveSec"]'
 
-    AUTHORS_GIFTS_BUTTON = '//a[@class="nav-side_i  __ac __with-ic"]'
+    # AUTHORS_GIFTS_BUTTON = '//a[@hrefattrs="st.cmd=giftsFront&st.or=NAV_MENU&st.cat=animatedGifts"]'
+    AUTHORS_GIFTS_BUTTON = '//i[@class="tico_img ic ic_nav_bear"]'
 
     def is_marked(self):
         """
