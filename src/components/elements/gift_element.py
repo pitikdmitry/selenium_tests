@@ -18,6 +18,9 @@ class GiftElement(BaseElement):
     # VIP_GIFT_BUTTON = '//a[@hrefattrs="st.cmd=giftsFront&st.or=NAV_MENU&st.cat=vipSale"]'
     VIP_GIFT_BUTTON = '//i[@class="tico_img ic ic_nav_vipsale"]'
 
+    CREATE_GIFT_BUTTON = '//a[@hrefattrs="st.cmd=appMain&st.appId=5738496"]'
+    # CREATE_GIFT_BUTTON = '//i[@class="gifts-sidebanner_tx"]'
+
     def is_marked(self):
         return self.existence_of_element_by_xpath(self.GIFTS_MARKED_ITEM_NAV_BAR)
 
@@ -32,3 +35,6 @@ class GiftElement(BaseElement):
 
     def get_vip_gift_button(self):
         return self.get_button_by_xpath(self.VIP_GIFT_BUTTON)
+
+    def get_create_gift_button(self):
+        return self.get_button_by_xpath(self.CREATE_GIFT_BUTTON)

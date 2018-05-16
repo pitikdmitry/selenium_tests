@@ -3,6 +3,7 @@ from src.components.elements.gift_element import GiftElement
 from src.pages.actual_gift_page import ActualGiftPage
 from src.pages.auth_page import AuthPage
 from src.pages.authors_gift_page import AuthorsGiftPage
+from src.pages.create_gift_page import CreateGiftPage
 from src.pages.postcard_page import PostCardPage
 from src.pages.vip_gift_page import VipGiftPage
 
@@ -37,6 +38,11 @@ class GiftPage(BaseElement):
         btn = self._gift_element.get_vip_gift_button()
         btn.click()
         return VipGiftPage(self.driver)
+
+    def open_create_gift(self):
+        btn = self._gift_element.get_create_gift_button()
+        btn.click()
+        return CreateGiftPage(self.driver)
 
     def open(self):
         self._auth_page.open_and_sign_in()
