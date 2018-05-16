@@ -8,7 +8,7 @@ from tests.main_page_tests import MainPageTests
 
 if __name__ == '__main__':
     suite = unittest.TestSuite((
-        # unittest.makeSuite(MainPageTests),
+        unittest.makeSuite(MainPageTests),
         unittest.makeSuite(GiftsPageTests),
     ))
     result = unittest.TextTestRunner().run(suite)

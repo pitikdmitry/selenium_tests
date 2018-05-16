@@ -3,8 +3,6 @@ import unittest
 
 from selenium.webdriver import DesiredCapabilities, Remote
 
-from src.auth_factory import AuthFactory
-from src.pages.auth_page import AuthPage
 from src.pages.main_page import MainPage
 
 
