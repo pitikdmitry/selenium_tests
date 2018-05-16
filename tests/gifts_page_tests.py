@@ -39,3 +39,8 @@ class GiftsPageTests(unittest.TestCase):
         actual_gift_page = self.gift_page.open_actual_gifts()
         ok = actual_gift_page.is_loaded()
         self.assertTrue(ok)
+
+    def test_open_postcards(self):
+        postcards_page = self.gift_page.open_postcards()
+        ok = postcards_page.is_loaded()
+        self.assertTrue(ok)
