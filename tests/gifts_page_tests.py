@@ -1,13 +1,9 @@
 import os
 import unittest
-from time import sleep
 
 from selenium.webdriver import DesiredCapabilities, Remote
 
-from src.auth_factory import AuthFactory
-from src.pages.auth_page import AuthPage
 from src.pages.gift_page import GiftPage
-from src.pages.main_page import MainPage
 
 
 class GiftsPageTests(unittest.TestCase):
@@ -26,9 +22,7 @@ class GiftsPageTests(unittest.TestCase):
     def tearDown(self):
         self.driver.quit()
 
-
     def test_open_authors_gifts(self):
         authors_gift_page = self.gift_page.open_authors_gifts()
         ok = authors_gift_page.is_loaded()
         self.assertTrue(ok)
-

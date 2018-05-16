@@ -18,13 +18,8 @@ class MainPageTests(unittest.TestCase):
             desired_capabilities=getattr(DesiredCapabilities, browser).copy()
         )
 
-        self._auth = AuthFactory.create(username='technopark8')
-
-        self.auth_page = AuthPage(self.driver)
         self.main_page = MainPage(self.driver)
-
-        self.auth_page.open()
-        self.auth_page.sign_in(self._auth.username, self._auth.password)
+        self.main_page.open()
 
     def tearDown(self):
         self.driver.quit()
