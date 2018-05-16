@@ -1,5 +1,6 @@
 from src.components.elements.main_element import MainElement
 from src.pages.base_page import BasePage
+from src.pages.gift_page import GiftPage
 
 
 class MainPage(BasePage):
@@ -9,6 +10,5 @@ class MainPage(BasePage):
         self.main_element = MainElement(self.driver)
 
     def open_gifts(self):
-        button = self.main_element.get_gifts_button()
-        button.click()
-        return button
+        self.main_element.get_gifts_button().click()
+        return GiftPage(self.driver)
