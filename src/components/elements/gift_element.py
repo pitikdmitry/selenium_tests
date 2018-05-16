@@ -15,6 +15,9 @@ class GiftElement(BaseElement):
     # POSTACARDS_BUTTON = '//a[@hrefattrs="st.cmd=giftsFront&st.or=NAV_MENU&st.cat=liveGifts"]'
     POSTACARDS_BUTTON = '//i[@class="tico_img ic ic_nav_flower"]'
 
+    # VIP_GIFT_BUTTON = '//a[@hrefattrs="st.cmd=giftsFront&st.or=NAV_MENU&st.cat=vipSale"]'
+    VIP_GIFT_BUTTON = '//i[@class="tico_img ic ic_nav_vipsale"]'
+
     def is_marked(self):
         return self.existence_of_element_by_xpath(self.GIFTS_MARKED_ITEM_NAV_BAR)
 
@@ -26,3 +29,6 @@ class GiftElement(BaseElement):
 
     def get_postcard_button(self):
         return self.get_button_by_xpath(self.POSTACARDS_BUTTON)
+
+    def get_vip_gift_button(self):
+        return self.get_button_by_xpath(self.VIP_GIFT_BUTTON)
