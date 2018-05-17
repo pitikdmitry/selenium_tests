@@ -49,8 +49,13 @@ class GiftsPageTests(unittest.TestCase):
     #     vip_gift_page = self.gift_page.open_vip_gifts()
     #     ok = vip_gift_page.is_loaded()
     #     self.assertTrue(ok)
+    #
+    # def test_create_gift(self):
+    #     create_gift_page = self.gift_page.open_create_gift()
+    #     ok = create_gift_page.is_loaded()
+    #     self.assertTrue(ok)
 
-    def test_create_gift(self):
-        create_gift_page = self.gift_page.open_create_gift()
+    def test_send_gift_secretly(self):
+        create_gift_page = self.gift_page.open_send_gift_secretly()
         ok = create_gift_page.is_loaded()
         self.assertTrue(ok)

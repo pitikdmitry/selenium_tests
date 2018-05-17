@@ -44,6 +44,12 @@ class GiftPage(BaseElement):
         btn.click()
         return CreateGiftPage(self.driver)
 
+    def open_send_gift_secretly(self):
+        btn = self._gift_element.get_first_gift_button()
+        btn.click()
+
+        return CreateGiftPage(self.driver)
+
     def open(self):
         self._auth_page.open_and_sign_in()
         self.driver.get(self._url)
