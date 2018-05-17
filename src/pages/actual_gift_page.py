@@ -6,7 +6,7 @@ class ActualGiftPage(BaseElement):
 
     def __init__(self, driver):
         super(ActualGiftPage, self).__init__(driver)
-        self._url = 'http://ok.ru/gifts'
+        self._url = 'https://ok.ru/gifts'
         self._element = ActualGiftElement(driver)
 
     def is_loaded(self):

@@ -8,7 +8,7 @@ class MainPage(BasePage):
 
     def __init__(self, driver):
         super(MainPage, self).__init__(driver)
-        self._url = 'http://ok.ru/'
+        self._url = 'https://ok.ru/'
         self.main_element = MainElement(self.driver)
         self._auth_page = AuthPage(driver)
 

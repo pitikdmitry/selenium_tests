@@ -1,3 +1,5 @@
+from selenium.webdriver.remote.webelement import WebElement
+
 from src.components.base_element import BaseElement
 
 
@@ -21,7 +23,15 @@ class GiftElement(BaseElement):
     CREATE_GIFT_BUTTON = '//a[@hrefattrs="st.cmd=appMain&st.appId=5738496"]'
     # CREATE_GIFT_BUTTON = '//i[@class="gifts-sidebanner_tx"]'
 
-    FIRST_GIFT_BUTTON = '//a[@hrefattrs="st.cmd=giftsFront&st.cat=main&st.fsId=1526495585366&cmd=PopLayer&st.layer.cmd=PopLayerSendPresentSelectFriendComposite&st.layer.sd=7aqlsExHOryS3f6JDcC2A5aFLBcBTZP_YLQCx7c6ZR62sYjoGMQjoBP9ME6sFBL3SbRkRFmjHEbhrE-yvFf1_pjGS05IAFNJRvbQF3w78FjoinnolYmUD6VvPeeCs4XBbg8cfsrPUbKZAmsIVPOCnZ2uuw3qJzMqg9xwEdNL6rPWvoSnh1slM7zmriINiYHL&st.layer.gfPresent=855747528267"]'
+    NEW_PRESENTS_GRID = '//div[@class="ugrid __xxxl __actualGifts __type_default"]'
+    # XPATH_GRID = '//div[contains(@class, "ugrid")][contains(@class, "__authorGifts")]'
+    # PRESENT = '//a[@class="gift_a"]'
+    PRESENT_CLASS_NAME = 'gift_a'
+
+    SECRET_BUTTON = '//input[@class="irc js-simpleSendPresent_chbx"][@id="anonymLabel"]'
+
+    RECEIVERS_GRID = '//ul[@class="ugrid_cnt"]'
+    RECEIVER = 'photo_img'
 
     def is_marked(self):
         return self.existence_of_element_by_xpath(self.GIFTS_MARKED_ITEM_NAV_BAR)
@@ -41,8 +51,20 @@ class GiftElement(BaseElement):
     def get_create_gift_button(self):
         return self.get_button_by_xpath(self.CREATE_GIFT_BUTTON)
 
-    def get_first_gift_button(self):
-        return self.get_button_by_xpath(self.FIRST_GIFT_BUTTON)
+    def get_present(self):
+        #   getting grid with new presents
+        new_presents_grid = self.get_button_by_xpath(self.NEW_PRESENTS_GRID)
+        #   finding first element with class gift_a
+        present = new_presents_grid.find_element_by_class_name(self.PRESENT_CLASS_NAME)
+        return present
+
+    def get_secret_button(self):
+        return self.get_button_by_xpath(self.SECRET_BUTTON)
+
+    def get_receiver(self):
+        receivers_grid = self.get_button_by_xpath(self.RECEIVERS_GRID)
+        receiver = receivers_grid.find_element_by_class_name(self.RECEIVER)
+        return receiver
 
     def get_send_gift_secretly_button(self):
         return self.get_button_by_xpath(self.CREATE_GIFT_BUTTON)

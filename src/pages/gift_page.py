@@ -12,7 +12,7 @@ class GiftPage(BaseElement):
 
     def __init__(self, driver):
         super(GiftPage, self).__init__(driver)
-        self._url = 'http://ok.ru/gifts'
+        self._url = 'https://ok.ru/gifts'
         self._gift_element = GiftElement(driver)
         self._auth_page = AuthPage(driver)
 
@@ -45,9 +45,17 @@ class GiftPage(BaseElement):
         return CreateGiftPage(self.driver)
 
     def open_send_gift_secretly(self):
-        btn = self._gift_element.get_first_gift_button()
-        btn.click()
+        #   clicking on gift
+        present = self._gift_element.get_present()
+        present.click()
 
+        #   pressing button to send gift by secret
+        secret_button = self._gift_element.get_secret_button()
+        secret_button.click()
+
+        #   choose receiver
+        receiver = self._gift_element.get_receiver()
+        receiver.click()
         return CreateGiftPage(self.driver)
 
     def open(self):

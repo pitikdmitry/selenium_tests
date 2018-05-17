@@ -6,7 +6,7 @@ class VipGiftPage(BaseElement):
 
     def __init__(self, driver):
         super(VipGiftPage, self).__init__(driver)
-        self._url = 'http://ok.ru/gifts/vipSale'
+        self._url = 'https://ok.ru/gifts/vipSale'
         self._element = VipGiftElement(driver)
 
     def is_loaded(self):

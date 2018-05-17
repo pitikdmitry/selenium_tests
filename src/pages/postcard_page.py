@@ -6,7 +6,7 @@ class PostCardPage(BaseElement):
 
     def __init__(self, driver):
         super(PostCardPage, self).__init__(driver)
-        self._url = 'http://ok.ru/gifts/liveGifts'
+        self._url = 'https://ok.ru/gifts/liveGifts'
         self._element = PostCardElement(driver)
 
     def is_loaded(self):
