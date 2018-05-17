@@ -29,6 +29,7 @@ class GiftElement(BaseElement):
     PRESENT_CLASS_NAME = 'gift_a'
 
     SECRET_BUTTON = '//input[@class="irc js-simpleSendPresent_chbx"][@id="anonymLabel"]'
+    PRIVATE_BUTTON = '//input[@class="irc js-simpleSendPresent_chbx"][@id="privateLabel"]'
 
     RECEIVERS_GRID = '//ul[@class="ugrid_cnt"]'
     RECEIVER = 'photo_img'
@@ -60,6 +61,9 @@ class GiftElement(BaseElement):
 
     def get_secret_button(self):
         return self.get_button_by_xpath(self.SECRET_BUTTON)
+
+    def get_private_button(self):
+        return self.get_button_by_xpath(self.PRIVATE_BUTTON)
 
     def get_receiver(self):
         receivers_grid = self.get_button_by_xpath(self.RECEIVERS_GRID)

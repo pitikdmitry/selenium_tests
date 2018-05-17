@@ -59,3 +59,8 @@ class GiftsPageTests(unittest.TestCase):
         create_gift_page = self.gift_page.open_send_gift_secretly()
         ok = create_gift_page.is_gift_sent()
         self.assertTrue(ok)
+
+    def test_send_gift_private(self):
+        create_gift_page = self.gift_page.open_send_gift_private()
+        ok = create_gift_page.is_gift_sent()
+        self.assertTrue(ok)
