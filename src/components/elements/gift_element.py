@@ -34,8 +34,14 @@ class GiftElement(BaseElement):
     RECEIVERS_GRID = '//ul[@class="ugrid_cnt"]'
     RECEIVER = 'photo_img'
 
+    EDIT_TEXT_SEARCH_GIFT = '//input[@class="it search-input_it"][@id="gf-search-input"]'
+    SEARCH_BUTTON = '//i[@class="search-input_ic ic ic_search"]'
+
     def is_marked(self):
         return self.existence_of_element_by_xpath(self.GIFTS_MARKED_ITEM_NAV_BAR)
+
+    def is_search_done(self):
+        return self.existence_of_element_by_xpath(self.XPATH_ROSE)
 
     def get_authors_gift_button(self):
         return self.get_button_by_xpath(self.AUTHORS_GIFTS_BUTTON)
@@ -69,6 +75,12 @@ class GiftElement(BaseElement):
         receivers_grid = self.get_button_by_xpath(self.RECEIVERS_GRID)
         receiver = receivers_grid.find_element_by_class_name(self.RECEIVER)
         return receiver
+
+    def get_edit_text(self):
+        return self.get_button_by_xpath(self.EDIT_TEXT_SEARCH_GIFT)
+
+    def get_search_button(self):
+        return self.get_button_by_xpath(self.SEARCH_BUTTON)
 
     def get_send_gift_secretly_button(self):
         return self.get_button_by_xpath(self.CREATE_GIFT_BUTTON)

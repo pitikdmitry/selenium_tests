@@ -1,3 +1,5 @@
+from selenium.webdriver.remote.webelement import WebElement
+
 from src.components.base_element import BaseElement
 from src.components.elements.gift_element import GiftElement
 from src.pages.actual_gift_page import ActualGiftPage
@@ -5,6 +7,7 @@ from src.pages.auth_page import AuthPage
 from src.pages.authors_gift_page import AuthorsGiftPage
 from src.pages.create_gift_page import CreateGiftPage
 from src.pages.postcard_page import PostCardPage
+from src.pages.search_gift_page import SearchGiftPage
 from src.pages.vip_gift_page import VipGiftPage
 
 
@@ -81,6 +84,16 @@ class GiftPage(BaseElement):
         receiver = self._gift_element.get_receiver()
         receiver.click()
         return CreateGiftPage(self.driver)
+
+    def search_gift(self):
+        # edit_text = WebElement(self._gift_element.get_edit_text())
+        text_input = "flower"
+        edit_text = self._gift_element.get_edit_text()
+        edit_text.send_keys(text_input)
+
+        search_button = self._gift_element.get_search_button()
+        search_button.click()
+        return SearchGiftPage(self.driver)
 
     def open(self):
         self._auth_page.open_and_sign_in()
