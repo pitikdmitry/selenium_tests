@@ -86,13 +86,12 @@ class GiftPage(BaseElement):
         return CreateGiftPage(self.driver)
 
     def search_gift(self):
-        # edit_text = WebElement(self._gift_element.get_edit_text())
         text_input = "flower"
         edit_text = self._gift_element.get_edit_text()
         edit_text.send_keys(text_input)
 
-        search_button = self._gift_element.get_search_button()
-        search_button.click()
+        # search_button = self._gift_element.get_search_button()
+        # search_button.click()
         return SearchGiftPage(self.driver)
 
     def open(self):

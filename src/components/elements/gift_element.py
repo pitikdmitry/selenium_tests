@@ -35,13 +35,12 @@ class GiftElement(BaseElement):
     RECEIVER = 'photo_img'
 
     EDIT_TEXT_SEARCH_GIFT = '//input[@class="it search-input_it"][@id="gf-search-input"]'
-    SEARCH_BUTTON = '//i[@class="search-input_ic ic ic_search"]'
+    SEARCH_BUTTON = '//div[@id="gf-search-lupa"]'
+
+
 
     def is_marked(self):
         return self.existence_of_element_by_xpath(self.GIFTS_MARKED_ITEM_NAV_BAR)
-
-    def is_search_done(self):
-        return self.existence_of_element_by_xpath(self.XPATH_ROSE)
 
     def get_authors_gift_button(self):
         return self.get_button_by_xpath(self.AUTHORS_GIFTS_BUTTON)
