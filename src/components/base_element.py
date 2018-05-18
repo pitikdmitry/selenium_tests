@@ -27,7 +27,7 @@ class BaseElement(object):
             EC.staleness_of(WebDriverWait(self.driver, 7, 0.3).until(
             EC.presence_of_element_located((By.XPATH, xpath)))))
         except TimeoutException as e:
-            return True
+            return False
         
     def invisibility_of_element_by_xpath(self, xpath):
         try:

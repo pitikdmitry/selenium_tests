@@ -1,6 +1,5 @@
 from src.components.base_element import BaseElement
 from src.components.elements.create_gift_element import CreateGiftElement
-from src.components.elements.gift_sent_element import GiftSentElement
 
 
 class CreateGiftPage(BaseElement):

@@ -8,24 +8,17 @@ class GiftElement(BaseElement):
     GIFTS_MARKED_ITEM_NAV_BAR = '//a[@hrefattrs="st.cmd=giftsFront&st.or=NAV_MENU&st._aid=NavMenu_User_Presents"]' \
                                 '[@class="mctc_navMenuSec mctc_navMenuActiveSec"]'
 
-    # AUTHORS_GIFTS_BUTTON = '//a[@hrefattrs="st.cmd=giftsFront&st.or=NAV_MENU&st.cat=animatedGifts"]'
     AUTHORS_GIFTS_BUTTON = '//i[@class="tico_img ic ic_nav_bear"]'
 
-    # ACTUAL_GIFTS_BUTTON = '//a[@hrefattrs="st.cmd=giftsFront&st.or=NAV_MENU&st.cat=main"]'
     ACTUAL_GIFTS_BUTTON = '//i[@class="tico_img ic ic_nav_gifts"]'
 
-    # POSTACARDS_BUTTON = '//a[@hrefattrs="st.cmd=giftsFront&st.or=NAV_MENU&st.cat=liveGifts"]'
     POSTACARDS_BUTTON = '//i[@class="tico_img ic ic_nav_flower"]'
 
-    # VIP_GIFT_BUTTON = '//a[@hrefattrs="st.cmd=giftsFront&st.or=NAV_MENU&st.cat=vipSale"]'
     VIP_GIFT_BUTTON = '//i[@class="tico_img ic ic_nav_vipsale"]'
 
     CREATE_GIFT_BUTTON = '//a[@hrefattrs="st.cmd=appMain&st.appId=5738496"]'
-    # CREATE_GIFT_BUTTON = '//i[@class="gifts-sidebanner_tx"]'
 
     NEW_PRESENTS_GRID = '//div[@class="ugrid __xxxl __actualGifts __type_default"]'
-    # XPATH_GRID = '//div[contains(@class, "ugrid")][contains(@class, "__authorGifts")]'
-    # PRESENT = '//a[@class="gift_a"]'
     PRESENT_CLASS_NAME = 'gift_a'
 
     SECRET_BUTTON = '//input[@class="irc js-simpleSendPresent_chbx"][@id="anonymLabel"]'
