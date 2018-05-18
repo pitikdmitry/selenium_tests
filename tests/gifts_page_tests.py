@@ -56,18 +56,18 @@ class GiftsPageTests(unittest.TestCase):
     #     self.assertTrue(ok)
     #
     # def test_send_gift_secretly(self):
-    #     send_gift_page = self.gift_page.send_gift_secretly()
-    #     ok = send_gift_page.is_gift_sent()
+    #     gift_page = self.gift_page.send_gift_secretly()
+    #     ok = gift_page.is_gift_sent()
     #     self.assertTrue(ok)
     #
     # def test_send_gift_private(self):
-    #     send_gift_page = self.gift_page.send_gift_private()
-    #     ok = send_gift_page.is_gift_sent()
+    #     gift_page = self.gift_page.send_gift_private()
+    #     ok = gift_page.is_gift_sent()
     #     self.assertTrue(ok)
     #
     # def test_send_gift_usual(self):
-    #     send_gift_page = self.gift_page.send_gift_private()
-    #     ok = send_gift_page.is_gift_sent()
+    #     gift_page = self.gift_page.send_gift_private()
+    #     ok = gift_page.is_gift_sent()
     #     self.assertTrue(ok)
     #
     # def test_search_gift(self):
