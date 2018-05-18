@@ -74,3 +74,8 @@ class GiftsPageTests(unittest.TestCase):
         search_gift_page = self.gift_page.search_gift()
         ok = search_gift_page.is_search_done()
         self.assertTrue(ok)
+
+    def test_send_gift_by_receivers_name(self):
+        search_gift_page = self.gift_page.send_gift_by_receivers_name()
+        ok = search_gift_page.is_search_done()
+        self.assertTrue(ok)

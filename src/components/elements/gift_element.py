@@ -37,7 +37,7 @@ class GiftElement(BaseElement):
     EDIT_TEXT_SEARCH_GIFT = '//input[@class="it search-input_it"][@id="gf-search-input"]'
     SEARCH_BUTTON = '//div[@id="gf-search-lupa"]'
 
-
+    EDIT_TEXT_FIND_RECEIVER = '//input[@class="it search-input_it search-input_it h-mod"][@id="field_search_query"]'
 
     def is_marked(self):
         return self.existence_of_element_by_xpath(self.GIFTS_MARKED_ITEM_NAV_BAR)
@@ -77,6 +77,9 @@ class GiftElement(BaseElement):
 
     def get_edit_text(self):
         return self.get_button_by_xpath(self.EDIT_TEXT_SEARCH_GIFT)
+
+    def get_edit_text_find_receiver(self):
+        return self.get_button_by_xpath(self.EDIT_TEXT_FIND_RECEIVER)
 
     def get_search_button(self):
         return self.get_button_by_xpath(self.SEARCH_BUTTON)

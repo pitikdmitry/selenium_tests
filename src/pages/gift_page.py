@@ -94,6 +94,19 @@ class GiftPage(BaseElement):
         # search_button.click()
         return SearchGiftPage(self.driver)
 
+    def send_gift_by_receivers_name(self):
+        #   clicking on gift
+        present = self._gift_element.get_present()
+        present.click()
+
+        #   finding receiver
+        text_input = "Мирослав"
+        edit_text = self._gift_element.get_edit_text_find_receiver()
+        edit_text.send_keys(text_input)
+        receiver = self._gift_element.get_receiver()
+        receiver.click()
+        return CreateGiftPage(self.driver)
+
     def open(self):
         self._auth_page.open_and_sign_in()
         self.driver.get(self._url)
