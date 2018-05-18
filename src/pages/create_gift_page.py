@@ -9,10 +9,6 @@ class CreateGiftPage(BaseElement):
         super(CreateGiftPage, self).__init__(driver)
         self._url = 'https://ok.ru/app/constructor'
         self._element = CreateGiftElement(driver)
-        self._gift_sent_element = GiftSentElement(driver)
 
     def is_loaded(self):
         return self._element.is_exists_grid()
-
-    def is_gift_sent(self):
-        return self._gift_sent_element.is_exists_gird()
