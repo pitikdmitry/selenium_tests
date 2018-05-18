@@ -10,7 +10,6 @@ from src.pages.auth_page import AuthPage
 from src.pages.authors_gift_page import AuthorsGiftPage
 from src.pages.create_gift_page import CreateGiftPage
 from src.pages.postcard_page import PostCardPage
-from src.pages.search_gift_page import SearchGiftPage
 from src.pages.vip_gift_page import VipGiftPage
 
 
