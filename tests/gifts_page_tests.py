@@ -59,7 +59,7 @@ class GiftsPageTests(unittest.TestCase):
         gift_page = self.gift_page.send_gift_secretly()
         ok = gift_page.is_gift_sent()
         # this functional was putted out!!
-        self.assertFalse(ok)
+        self.assertTrue(ok)
 
     def test_send_gift_private(self):
         gift_page = self.gift_page.send_gift_private()

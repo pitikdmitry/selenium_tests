@@ -62,9 +62,10 @@ class GiftPage(BaseElement):
         present = self._gift_element.get_present()
         present.click()
 
+        # this functional was putted out!!!
         #   pressing button to send gift by secret
-        secret_button = self._gift_element.get_secret_button()
-        secret_button.click()
+        # secret_button = self._gift_element.get_secret_button()
+        # secret_button.click()
 
         #   choose receiver
         receiver = self._gift_element.get_receiver()
